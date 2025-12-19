@@ -2,7 +2,19 @@
 
 This project performs sentiment analysis and topic modelling on review data using Google Cloud Natural Language API and Vertex AI.
 
+## Relevant Documents
+
+- **Project Presentation**: [Google Slides](https://docs.google.com/presentation/d/1a7cz1MJohllrkrjDxezuYfDvn8xzavciGf9Mm6TsqDg/edit?usp=sharing)
+- **Main Notebook**: [reviews_notebook.ipynb](notebooks/reviews_notebook.ipynb)
+- **Dependencies**: [requirements.txt](requirements.txt)
+
+> [!TIP]
+> For a quick overview of the project and results, start with the Google Slides presentation above.
+
 ## Prerequisites
+
+> [!IMPORTANT]
+> Ensure you have the following before starting:
 
 - Python 3.8+
 - Google Cloud account with:
@@ -36,6 +48,9 @@ pip install -r requirements.txt
 
 ### 3. Google Cloud Authentication
 
+> [!WARNING]
+> Your service account key grants access to your Google Cloud resources. Keep it secure and never commit it to version control.
+
 1. Download your service account JSON key from Google Cloud Console:
    - Go to IAM & Admin → Service Accounts
    - Create or select a service account with the required permissions
@@ -45,9 +60,14 @@ pip install -r requirements.txt
    - This file is automatically gitignored for security
    - The notebook expects this exact filename and location
 
+> [!TIP]
+> If you're using a different filename, update the `GOOGLE_APPLICATION_CREDENTIALS` environment variable accordingly.
+
 ### 4. Configure Project Settings
 
-Update the following in the notebook:
+> [!NOTE]
+> Update the following variables in the notebook to match your Google Cloud project:
+
 - `bucket_name`: Your GCS bucket name (currently `ubc-bolt-case`)
 - `project`: Your Google Cloud project ID (currently `sent-analysis-452609`)
 
