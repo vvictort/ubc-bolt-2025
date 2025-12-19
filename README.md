@@ -79,13 +79,22 @@ pip install -r requirements.txt
    - **Section 2**: Topic Modeling - Classifies reviews into categories
    - **Section 3**: Data Visualization - Creates plots and insights
 
+> [!TIP]
+> Use "Run All" in Jupyter/VS Code to execute all cells at once, or run them individually to inspect intermediate results.
+
 ## Security Note
 
-⚠️ **Never commit your service account credentials to version control!**
+> [!WARNING]
+> **Never commit your service account credentials to version control!**
+
 - The `.gitignore` file is configured to exclude all `*.json` credential files
 - Always use environment variables or local files excluded from git
+- Rotate your keys immediately if they are accidentally exposed
 
 ## Data
+
+> [!NOTE]
+> Data files are expected in your Google Cloud Storage bucket.
 
 The notebook expects:
 - Input: `reviews.csv` in your GCS bucket
