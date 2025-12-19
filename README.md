@@ -89,3 +89,6 @@ The notebook expects:
 ## License
 
 See LICENSE file for details.
+
+## Acknowledgement
+Contributor: Mikail Durrani, Jacky Zhong and me (ofc)
