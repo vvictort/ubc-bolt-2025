@@ -5,8 +5,6 @@ This project performs sentiment analysis and topic modelling on review data usin
 ## Relevant Documents
 
 - **Project Presentation**: [Google Slides](https://docs.google.com/presentation/d/1a7cz1MJohllrkrjDxezuYfDvn8xzavciGf9Mm6TsqDg/edit?usp=sharing)
-- **Main Notebook**: [reviews_notebook.ipynb](notebooks/reviews_notebook.ipynb)
-- **Dependencies**: [requirements.txt](requirements.txt)
 
 > [!TIP]
 > For a quick overview of the project and results, start with the Google Slides presentation above.
@@ -48,9 +46,6 @@ pip install -r requirements.txt
 
 ### 3. Google Cloud Authentication
 
-> [!WARNING]
-> Your service account key grants access to your Google Cloud resources. Keep it secure and never commit it to version control.
-
 1. Download your service account JSON key from Google Cloud Console:
    - Go to IAM & Admin → Service Accounts
    - Create or select a service account with the required permissions
@@ -59,9 +54,6 @@ pip install -r requirements.txt
 2. Save the downloaded file as `service-account-key.json` in the project root
    - This file is automatically gitignored for security
    - The notebook expects this exact filename and location
-
-> [!TIP]
-> If you're using a different filename, update the `GOOGLE_APPLICATION_CREDENTIALS` environment variable accordingly.
 
 ### 4. Configure Project Settings
 
@@ -79,13 +71,7 @@ pip install -r requirements.txt
    - **Section 2**: Topic Modeling - Classifies reviews into categories
    - **Section 3**: Data Visualization - Creates plots and insights
 
-> [!TIP]
-> Use "Run All" in Jupyter/VS Code to execute all cells at once, or run them individually to inspect intermediate results.
-
 ## Security Note
-
-> [!WARNING]
-> **Never commit your service account credentials to version control!**
 
 - The `.gitignore` file is configured to exclude all `*.json` credential files
 - Always use environment variables or local files excluded from git
