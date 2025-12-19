@@ -1,6 +1,6 @@
-# Review Sentiment Analysis and Topic Modeling
+# Peak Mountain Resort: Sentiment Analysis and Topic Modelling
 
-This project performs sentiment analysis and topic modeling on review data using Google Cloud Natural Language API and Vertex AI.
+This project performs sentiment analysis and topic modelling on review data using Google Cloud Natural Language API and Vertex AI.
 
 ## Prerequisites
 
