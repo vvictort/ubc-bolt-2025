@@ -13,33 +13,39 @@ This project performs sentiment analysis and topic modeling on review data using
 
 ## Setup
 
-### 1. Install Dependencies
+### 1. Create Python Environment
+
+**Create and activate a virtual environment:**
 
 ```bash
-pip install google-cloud-storage google-cloud-language google-cloud-aiplatform pandas numpy matplotlib seaborn scikit-learn
+# Create virtual environment
+python -m venv venv
+
+# Activate on Linux/Mac
+source venv/bin/activate
+
+# Activate on Windows
+# venv\Scripts\activate
 ```
 
-### 2. Google Cloud Authentication
+### 2. Install Dependencies
 
-**Option A: Environment Variable (Recommended)**
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Google Cloud Authentication
 
 1. Download your service account JSON key from Google Cloud Console:
    - Go to IAM & Admin → Service Accounts
-   - Create or select a service account
-   - Create a new JSON key
+   - Create or select a service account with the required permissions
+   - Keys tab → Add Key → Create new key → JSON format
 
-2. Set the environment variable:
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account-key.json"
-   ```
+2. Save the downloaded file as `service-account-key.json` in the project root
+   - This file is automatically gitignored for security
+   - The notebook expects this exact filename and location
 
-**Option B: Local File**
-
-1. Download your service account JSON key
-2. Save it as `service-account-key.json` in the project root (this file is gitignored)
-3. The notebook will automatically detect it
-
-### 3. Configure Project Settings
+### 4. Configure Project Settings
 
 Update the following in the notebook:
 - `bucket_name`: Your GCS bucket name (currently `ubc-bolt-case`)
